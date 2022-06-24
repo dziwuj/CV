@@ -1,0 +1,23 @@
+@mixin big {
+    height: calc(3508px / 2);
+    width: calc(2480px / 2);
+    left: 0;
+    top: 0;
+    margin: 0 auto;
+    padding: 0;
+    position: absolute;
+}
+
+@mixin small {
+    width: 100vw;
+    left: 0;
+    top: 0;
+    margin: 0 auto;
+    padding: 0;
+    position: absolute;
+}
+
+$text-color: #eaeaea;
+$background-color: #353535;
+$primary-color: #ff10f0;
+$secondary-color: #1f51ff;
