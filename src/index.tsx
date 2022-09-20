@@ -10,6 +10,7 @@ import Languages from "./components/Languages";
 import Experience from "./components/Experience";
 import Education from "./components/Education";
 import Courses from "./components/Courses";
+import Name from "./components/Name";
 
 // const Application: React.FC = () => <h1>Application</h1>;
 
@@ -31,6 +32,7 @@ function App() {
     return isMobile ? (
         <div className="small">
             <div className="mid">
+                <Name />
                 <Photo />
                 <About />
                 <Contact />
@@ -44,6 +46,7 @@ function App() {
     ) : (
         <div className="big">
             <div className="left">
+                <Name />
                 <Photo />
                 <Contact />
                 <Skills />
