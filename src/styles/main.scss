@@ -410,7 +410,7 @@ p {
     .show {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        animation: grow 1s ease-in;
+        animation: grow 0.3s ease-in;
         transform-origin: center bottom;
 
         @keyframes grow {
@@ -428,7 +428,7 @@ p {
             opacity: 0;
             border: none;
             border-radius: 0;
-            animation: appear 0.5s ease-in 0.75s forwards;
+            animation: appear 0.3s ease-in 0.15s forwards;
             @keyframes appear {
                 0% {
                     opacity: 0;
@@ -442,7 +442,7 @@ p {
 
     .hidden {
         display: grid;
-        animation: shrink 1s ease-in 0.25s forwards;
+        animation: shrink 0.3s ease-in 0.15s forwards;
         transform-origin: center bottom;
 
         @keyframes shrink {
@@ -460,7 +460,7 @@ p {
             opacity: 1;
             border-bottom: 2px solid white;
             border-radius: 0;
-            animation: disappear 0.5s ease-in forwards;
+            animation: disappear 0.3s ease-in forwards;
             @keyframes disappear {
                 100% {
                     opacity: 0;
