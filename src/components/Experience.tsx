@@ -1,30 +1,33 @@
-import React from "react";
+import React, { useContext } from "react";
+import { observer } from "mobx-react";
+import { StoreContext } from "..";
 
-export default function Experience() {
+const Experience: React.FunctionComponent = observer(() => {
+    const store = useContext(StoreContext);
+    const { experience } = store.TranslationsStore.translations;
     return (
         <div className="experience">
-            <h1>Experience</h1>
+            <h1>{experience.title}</h1>
 
-            <h2>Endurance Systems LLC</h2>
-            <h3>Frontend Developer - from July 2022</h3>
-            <p>
-                Working on big projects with a team of developers. During my time in this company I used technologies like React 18, Rollup, different map
-                libraries and SVN as version control system.
-            </p>
+            <h2>{experience.firstJob.company}</h2>
+            <h3>
+                {experience.firstJob.position} - {experience.firstJob.dates}
+            </h3>
+            <p>{experience.firstJob.description}</p>
 
-            <h2>Krakweb</h2>
-            <h3>Internship - November/December 2020</h3>
-            <p>
-                Creating my own website as a template for clients. To archive this I used HTML, SCSS, JavaScript and the company&apos;s CMS. The apprenticeship
-                was completed with the highest grade.
-            </p>
+            <h2>{experience.secondJob.company}</h2>
+            <h3>
+                {experience.secondJob.position} - {experience.secondJob.dates}
+            </h3>
+            <p>{experience.secondJob.description}</p>
 
-            <h2>Eurokreator</h2>
-            <h3>Internship - June 2020</h3>
-            <p>
-                Making research regarding MOOC platforms and software used to create webcasts. Furthermore, I learned how to use WordPress and Google API. The
-                apprenticeship was completed with the highest grade.
-            </p>
+            <h2>{experience.thirdJob.company}</h2>
+            <h3>
+                {experience.thirdJob.position} - {experience.thirdJob.dates}
+            </h3>
+            <p>{experience.thirdJob.description}</p>
         </div>
     );
-}
+});
+
+export { Experience };

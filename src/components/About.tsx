@@ -1,17 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
+import { observer } from "mobx-react";
+import { StoreContext } from "..";
 
-export default function About() {
+const About: React.FunctionComponent = observer(() => {
+    const store = useContext(StoreContext);
+    const { about } = store.TranslationsStore.translations;
     return (
         <div className="about">
-            <h1>Who am I?</h1>
-            <p>
-                I am an ambitious student looking for new challenges. I am
-                interested in electronics, psychology, game design and video
-                editing. Additionally, I am a very communicative and open
-                person, which is why I enjoy travelling, meeting new people and
-                broadening my horizons. I love analysing problems and solving
-                them in the best, most optimal way.
-            </p>
+            <h1>{about.title}</h1>
+            <p>{about.description}</p>
         </div>
     );
-}
+});
+
+export { About };

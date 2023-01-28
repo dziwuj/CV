@@ -1,21 +1,24 @@
-import React from "react";
+import React, { useContext } from "react";
+import { observer } from "mobx-react";
+import { StoreContext } from "..";
 
-export default function Courses() {
+const Courses: React.FunctionComponent = observer(() => {
+    const store = useContext(StoreContext);
+    const { courses } = store.TranslationsStore.translations;
     return (
         <div className="courses">
-            <h1>Courses and lectures</h1>
+            <h1>{courses.title}</h1>
 
-            <h2>Developing start-up</h2>
-            <h3>Development of my own start-up in the SEED project. Cracow</h3>
+            <h2>{courses.firstCourse.title}</h2>
+            <h3>{courses.firstCourse.description}</h3>
 
-            <h2>AutoCAD course</h2>
-            <h3>AutoCAD 2018 2D course</h3>
+            <h2>{courses.secondCourse.title}</h2>
+            <h3>{courses.secondCourse.description}</h3>
 
-            <h2>Erasmus+ Youth Exchange &quot;Can I join you?&quot;</h2>
-            <h3>
-                Taking a part in Erasmus+ project in Store Klaus, Denmark
-                <br /> (31 May - 08 June, 2022)
-            </h3>
+            <h2>{courses.thirdCourse.title}</h2>
+            <h3 dangerouslySetInnerHTML={{ __html: courses.thirdCourse.description }}></h3>
         </div>
     );
-}
+});
+
+export { Courses };

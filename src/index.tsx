@@ -1,21 +1,24 @@
-import React from "react";
-import { useState, useEffect } from "react";
-import { render } from "react-dom";
-import "./assets/styles/main.scss";
-import Photo from "./components/Photo";
-import About from "./components/About";
-import Skills from "./components/Skills";
-import Contact from "./components/Contact";
-import Languages from "./components/Languages";
-import Experience from "./components/Experience";
-import Education from "./components/Education";
-import Courses from "./components/Courses";
-import Name from "./components/Name";
+import React, { useState, useEffect, createContext, useRef } from "react";
+import { createRoot } from "react-dom/client";
+import { Photo } from "./components/Photo";
+import { About } from "./components/About";
+import { Skills } from "./components/Skills";
+import { Contact } from "./components/Contact";
+import { Languages } from "./components/Languages";
+import { Experience } from "./components/Experience";
+import { Education } from "./components/Education";
+import { Courses } from "./components/Courses";
+import { Name } from "./components/Name";
+import { Overlay } from "./components/Overlay";
+import { rootStore } from "./stores/Root.store";
 
-// const Application: React.FC = () => <h1>Application</h1>;
+import "./styles/main.scss";
+
+export const StoreContext = createContext(rootStore);
 
 function App() {
-    const [isMobile, setIsMobile] = useState(false);
+    const [isMobile, setIsMobile] = useState<boolean>(false);
+    const resumeRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
         window.screen.width <= 760 ? setIsMobile(true) : setIsMobile(false);
@@ -27,39 +30,44 @@ function App() {
 
     window.onresize = detectWindowSize;
 
-    console.log(isMobile);
-
-    return isMobile ? (
-        <div className="small">
-            <div className="mid">
-                <Name />
-                <Photo />
-                <About />
-                <Contact />
-                <Skills />
-                <Languages />
-                <Experience />
-                <Education />
-                <Courses />
-            </div>
-        </div>
-    ) : (
-        <div className="big">
-            <div className="left">
-                <Name />
-                <Photo />
-                <Contact />
-                <Skills />
-                <Languages />
-            </div>
-            <div className="right">
-                <About />
-                <Experience />
-                <Education />
-                <Courses />
-            </div>
-        </div>
+    return (
+        <StoreContext.Provider value={rootStore}>
+            {isMobile ? (
+                <div className="small">
+                    <div className="mid">
+                        <Name />
+                        <Photo />
+                        <About />
+                        <Contact />
+                        <Skills />
+                        <Languages />
+                        <Experience />
+                        <Education />
+                        <Courses />
+                    </div>
+                </div>
+            ) : (
+                <div className="big" ref={resumeRef}>
+                    <div className="left">
+                        <Name />
+                        <Photo />
+                        <Contact />
+                        <Skills />
+                        <Languages />
+                    </div>
+                    <div className="right">
+                        <About />
+                        <Experience />
+                        <Education />
+                        <Courses />
+                    </div>
+                </div>
+            )}
+            <Overlay resumeRef={resumeRef} />
+        </StoreContext.Provider>
     );
 }
 
-render(<App />, document.getElementById("root"));
+const container = document.getElementById("root");
+const root = createRoot(container!);
+root.render(<App />);

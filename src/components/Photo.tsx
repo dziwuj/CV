@@ -1,10 +1,12 @@
 import React from "react";
-import prof from "../assets/images/prof.png";
+import images from "../constants/images";
 
-export default function Photo() {
+const Photo = () => {
     return (
         <div className="photo">
-            <img alt="profile photo" src={prof} />
+            <img alt="profile photo" src={images.prof} />
         </div>
     );
-}
+};
+
+export { Photo };
