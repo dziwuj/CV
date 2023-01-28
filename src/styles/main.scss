@@ -14,6 +14,7 @@ body {
 .container {
     background-color: $background-color;
     color: $text-color;
+    @include big;
 }
 
 h1 {
@@ -40,16 +41,13 @@ p {
     font-size: larger;
 }
 
-.container {
-    @include big;
-}
-
 .desktop {
     display: grid;
     grid-template-columns: 300px 1fr;
     background-color: $background-color;
     color: $text-color;
     padding: 20px;
+    @include big;
 
     h1 {
         margin: 10px 0;
@@ -89,6 +87,7 @@ p {
 
     .photo {
         width: 100%;
+        aspect-ratio: 1/1;
         flex: 0 1 auto;
         background-size: cover;
         background-position: center;
@@ -268,6 +267,7 @@ p {
             background-repeat: no-repeat;
 
             img {
+                max-height: 400px;
                 width: 100%;
                 height: 100%;
                 object-fit: cover;

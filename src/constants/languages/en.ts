@@ -38,7 +38,7 @@ export const translations: ITranslations = {
             position: "Frontend Developer",
             dates: "from July 2022 to October 2022",
             description:
-                "Working on big projects with a team of developers. During my time in this company I used technologies like React 18, Rollup, different map libraries and SVN as version control system.",
+                "Working with large JSON/GeoJSON files. During my time in this company I used technologies like TypeScript, React 18, Rollup, different map libraries and SVN as version control system. I also wrote a slider at the time, which is available for download on npm.",
         },
         secondJob: {
             company: "Krakweb",
@@ -61,6 +61,9 @@ export const translations: ITranslations = {
         dates: "September 2018 - May 2022",
         firstExam: "EE.08 Exam 90%/100% (theory/practice)",
         secondExam: "EE.09 Exam 90%/98% (theory/practice)",
+        university: "Cracow University of Technology",
+        universityDates: "September 2022 - now",
+        universityDescription: `Faculty of Applied Computer Science`,
     },
     courses: {
         title: "Courses and lectures",

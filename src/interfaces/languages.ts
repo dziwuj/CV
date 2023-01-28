@@ -33,6 +33,9 @@ export interface ITranslations {
         dates: string;
         firstExam: string;
         secondExam: string;
+        university: string;
+        universityDates: string;
+        universityDescription: string;
     };
     courses: {
         title: string;

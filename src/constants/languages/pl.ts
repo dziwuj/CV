@@ -38,7 +38,7 @@ export const translations: ITranslations = {
             position: "Frontend Developer",
             dates: "od lipca 2022 do października 2022",
             description:
-                "Praca nad dużymi projektami z zespołem programistów. Podczas mojego pobytu w tej firmie korzystałem z takich technologii jak React 18, Rollup, różnych bibliotek do obsługi map i SVN jako systemu kontroli wersji.",
+                "Praca z dużymi plikami JSON/GeoJSON. Podczas mojego pobytu w tej firmie korzystałem z takich technologii jak React 18, Rollup, różnych bibliotek do obsługi map i SVN jako systemu kontroli wersji. Napisałem wtedy również slider, który jest udostępniony do pobrania na npm.",
         },
         secondJob: {
             company: "Krakweb",
@@ -61,6 +61,9 @@ export const translations: ITranslations = {
         dates: "wrzesień 2018 - maj 2022",
         firstExam: "Egzamin EE.08 90%/100% (teoria/praktyka)",
         secondExam: "Egzamin EE.09 90%/98% (teoria/praktyka)",
+        university: "Politechnika Krakowska",
+        universityDates: "wrzesień 2022 - obecnie",
+        universityDescription: `Studia na kierunku Informatyka Stosowana`,
     },
     courses: {
         title: "Kursy i szkolenia",
