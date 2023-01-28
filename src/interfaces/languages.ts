@@ -1,6 +1,7 @@
 export interface ITranslations {
     overlay: {
         download: string;
+        changeLanguage: string;
     };
     about: {
         title: string;

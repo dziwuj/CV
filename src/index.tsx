@@ -11,59 +11,51 @@ import { Courses } from "./components/Courses";
 import { Name } from "./components/Name";
 import { Overlay } from "./components/Overlay";
 import { rootStore } from "./stores/Root.store";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 import "./styles/main.scss";
+import { Burger } from "./components/Burger";
 
 export const StoreContext = createContext(rootStore);
 
 function App() {
-    const [isMobile, setIsMobile] = useState<boolean>(false);
+    const [isShown, setIsShown] = useState<boolean>(false);
     const resumeRef = useRef<HTMLDivElement>(null);
-
-    useEffect(() => {
-        window.screen.width <= 760 ? setIsMobile(true) : setIsMobile(false);
-    }, [window.screen.width]);
-
-    function detectWindowSize() {
-        window.innerWidth <= 760 ? setIsMobile(true) : setIsMobile(false);
-    }
-
-    window.onresize = detectWindowSize;
 
     return (
         <StoreContext.Provider value={rootStore}>
-            {isMobile ? (
-                <div className="small">
-                    <div className="mid">
-                        <Name />
-                        <Photo />
-                        <About />
-                        <Contact />
-                        <Skills />
-                        <Languages />
-                        <Experience />
-                        <Education />
-                        <Courses />
-                    </div>
-                </div>
-            ) : (
-                <div className="big" ref={resumeRef}>
-                    <div className="left">
+            <div className="container">
+                <div className="desktop" ref={resumeRef}>
+                    <div className="col-1">
                         <Name />
                         <Photo />
                         <Contact />
                         <Skills />
                         <Languages />
                     </div>
-                    <div className="right">
+                    <div className="col-2">
                         <About />
                         <Experience />
                         <Education />
                         <Courses />
                     </div>
                 </div>
-            )}
-            <Overlay resumeRef={resumeRef} />
+
+                <div className="mobile">
+                    <Name />
+                    <Photo />
+                    <About />
+                    <Contact />
+                    <Skills />
+                    <Languages />
+                    <Experience />
+                    <Education />
+                    <Courses />
+                </div>
+            </div>
+            <Burger setIsShown={setIsShown} isShown={isShown} />
+            <Overlay resumeRef={resumeRef} setIsShown={setIsShown} isShown={isShown} />
         </StoreContext.Provider>
     );
 }

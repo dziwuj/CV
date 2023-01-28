@@ -3,6 +3,7 @@ import { ITranslations } from "../../interfaces/languages";
 export const translations: ITranslations = {
     overlay: {
         download: "Pobierz CV",
+        changeLanguage: "Zmień język:",
     },
     about: {
         title: "Kim jestem?",
