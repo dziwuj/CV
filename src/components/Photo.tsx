@@ -4,7 +4,7 @@ import images from "../constants/images";
 const Photo = () => {
     return (
         <div className="photo">
-            <img alt="profile photo" src={images.prof} />
+            <div style={{ backgroundImage: `url(${images.prof})` }} />
         </div>
     );
 };
