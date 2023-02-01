@@ -19,7 +19,7 @@ export const translations: ITranslations = {
     skills: {
         title: "Umiejętności",
         list: `<li>HTML5/CSS3 (Sass, Less, Bootstrap)</li>
-          <li>JavaScript/TypeScript (React, React Native, Socket.io, Node, jQuery, Leaflet)</li>
+          <li>JavaScript/TypeScript (React, React Native, Vue, Socket.io, Node, jQuery, Leaflet, Mobx)</li>
           <li>Module bundlers (Webpack, Parcel, Rollup)</li>
           <li>Systemy kontroli wersji (Github, SVN)</li>
           <li>Bazy danych (MySQL, PostgreSQL, MongoDB)</li>
