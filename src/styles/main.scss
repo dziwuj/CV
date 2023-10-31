@@ -1,11 +1,10 @@
-@import "base";
-@import "./fonts/red-hat-display";
-@import "./fonts/dejavu-sans";
-@import "./burger";
+@import 'base';@import './fonts/red-hat-display';
+@import './fonts/dejavu-sans';
+@import './burger';
 
 html,
 body {
-    font-family: "Red Hat Display", "DejaVu Sans", sans-serif;
+    font-family: 'Red Hat Display', 'DejaVu Sans', sans-serif;
     height: 100%;
     background-color: $background-color;
     color: $text-color;
@@ -223,6 +222,8 @@ p {
         .flag {
             width: 60px;
             height: 60px;
+            border: 2px solid $text-color;
+            border-radius: 50%;
         }
     }
 

@@ -1,5 +1,4 @@
-@mixin big {
-    height: calc(3600px / 2);
+@mixin big {    height: calc(3600px / 2);
     width: calc(2520px / 2);
     left: 0;
     top: 0;
@@ -20,5 +19,5 @@
 
 $text-color: #eaeaea;
 $background-color: #353535;
-$primary-color: #ff10f0;
-$secondary-color: #1f51ff;
+$primary-color: #e8206c;
+$secondary-color: #823bec;
