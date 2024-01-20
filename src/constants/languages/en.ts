@@ -35,7 +35,7 @@ export const translations: ITranslations = {
         firstJob: {
             company: 'Pluscode',
             position: 'Frontend Developer',
-            dates: 'from July 2023 to now',
+            dates: 'from July 2023 to November 2023',
             description:
                 'Made websites using React and Astro. While working for this company I was also exposed to creating a browser plugin dealing with scraping. I also had the opportunity to work on advanced animations using GSAP.',
         },

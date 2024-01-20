@@ -34,7 +34,7 @@ export const translations: ITranslations = {
         firstJob: {
             company: 'Pluscode',
             position: 'Frontend Developer',
-            dates: 'od lipca 2023 do teraz',
+            dates: 'od lipca 2023 do listopada 2023',
             description:
                 "Tworzenie stron internetowych przy użyciu React'a i Astro. Podczas pracy w tej firmie miałem też styczność z tworzeniem wtyczki przeglądarki zajmującej się scrapingiem. Miałem również okazję popracować nad zaawansowanymi animacjami z użyciem GSAP.",
         },
