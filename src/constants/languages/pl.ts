@@ -28,30 +28,30 @@ export const translations: ITranslations = {
     },
     languages: {
         title: 'Języki',
-        list: `<li>Polski - ojczysty</li><li>Angielski - B2</li>`,
+        list: `<li>Polski - ojczysty</li><li>Angielski - C1</li>`,
     },
     experience: {
+        title: 'Doświadczenie',
         firstJob: {
+            company: 'Żabka Polska',
+            position: 'Kasjer/Sprzedawca',
+            dates: 'od grudnia 2023 do obecnie',
+            description:
+                'Do moich obowiązków należało m.in. obsługa kasy fiskalnej, terminala płatniczego, sprawdzanie terminów ważności produktów, zmiana promocji, obsługa dostaw i dbanie o czystość sklepu. Rozwinąłem również umiejętności w zakresie obsługi klienta, zarządzania czasem oraz pracy zespołowej.',
+        },
+        secondJob: {
             company: 'Pluscode',
             position: 'Frontend Developer',
             dates: 'od lipca 2023 do listopada 2023',
             description:
                 "Tworzenie stron internetowych przy użyciu React'a i Astro. Podczas pracy w tej firmie miałem też styczność z tworzeniem wtyczki przeglądarki zajmującej się scrapingiem. Miałem również okazję popracować nad zaawansowanymi animacjami z użyciem GSAP.",
         },
-        title: 'Doświadczenie',
-        secondJob: {
+        thirdJob: {
             company: 'Endurance Systems LLC',
             position: 'Frontend Developer',
             dates: 'od lipca 2022 do października 2022',
             description:
                 'Praca z dużymi plikami JSON/GeoJSON. Podczas mojego pobytu w tej firmie korzystałem z takich technologii jak React 18, Rollup, różnych bibliotek do obsługi map i SVN jako systemu kontroli wersji. Napisałem wtedy również slider, który jest udostępniony do pobrania na npm.',
-        },
-        thirdJob: {
-            company: 'Krakweb',
-            position: 'Praktyki',
-            dates: 'Listopad/Grudzień 2020',
-            description:
-                'Stworzenie własnej strony internetowej jako szablonu dla klientów. Do tego celu wykorzystałem HTML, SCSS, JavaScript oraz firmowy CMS. Praktyka zawodowa została zakończona z oceną celującą.',
         },
     },
     education: {
@@ -65,14 +65,14 @@ export const translations: ITranslations = {
         universityDescription: `Studia na kierunku Informatyka Stosowana`,
     },
     courses: {
-        title: 'Kursy i szkolenia',
+        title: 'Certyfikaty i szkolenia',
         firstCourse: {
-            title: 'Rozwój start-upu',
-            description: 'Rozwój własnego start-upu w ramach projektu fundacji SEED Kraków',
+            title: 'Aktualne badania sanitarno-epidemiologiczne',
+            description: 'Wykonanie badań  sanitarno-epidemiologicznych na potrzeby pracy w kontakcie z żywnością',
         },
         secondCourse: {
-            title: 'Kurs AutoCAD',
-            description: 'Kurs AutoCAD 2018 2D w ramach dodatkowych zajęć w szkole',
+            title: 'Rozwój start-upu',
+            description: 'Rozwój własnego start-upu w ramach projektu fundacji SEED Kraków',
         },
         thirdCourse: {
             title: `Wymiana młodzieży w ramach programu Erasmus+ "Can I join you?"`,

@@ -28,30 +28,30 @@ export const translations: ITranslations = {
     },
     languages: {
         title: 'Languages',
-        list: `<li>Polish - native</li><li>English - B2</li>`,
+        list: `<li>Polish - native</li><li>English - C1</li>`,
     },
     experience: {
         title: 'Experience',
         firstJob: {
+            company: 'Żabka Polska',
+            position: 'Cashier/Salesman',
+            dates: 'December 2023 to present',
+            description:
+                'My responsibilities included operating the cash register, payment terminal, checking product expiry dates, changing promotions, handling deliveries and keeping the shop clean. I also developed skills in customer service, time management and teamwork.',
+        },
+        secondJob: {
             company: 'Pluscode',
             position: 'Frontend Developer',
             dates: 'from July 2023 to November 2023',
             description:
                 'Made websites using React and Astro. While working for this company I was also exposed to creating a browser plugin dealing with scraping. I also had the opportunity to work on advanced animations using GSAP.',
         },
-        secondJob: {
+        thirdJob: {
             company: 'Endurance Systems LLC',
             position: 'Frontend Developer',
             dates: 'from July 2022 to October 2022',
             description:
                 'Working with large JSON/GeoJSON files. During my time in this company I used technologies like TypeScript, React 18, Rollup, different map libraries and SVN as version control system. I also wrote a slider at the time, which is available for download on npm.',
-        },
-        thirdJob: {
-            company: 'Krakweb',
-            position: 'Internship',
-            dates: 'November/December 2020',
-            description:
-                "Creating my own website as a template for clients. To achieve this I used HTML, SCSS, JavaScript, and the company's CMS. The apprenticeship was completed with the highest grade.",
         },
     },
     education: {
@@ -65,14 +65,14 @@ export const translations: ITranslations = {
         universityDescription: `Faculty of Applied Computer Science`,
     },
     courses: {
-        title: 'Courses and lectures',
+        title: 'Certificates and courses',
         firstCourse: {
-            title: 'Developing start-up',
-            description: 'Development of my own start-up in the SEED project. Cracow',
+            title: 'Up-to-date sanitary-epidemiological tests',
+            description: 'Completion of sanitary-epidemiological tests for work in contact with food',
         },
         secondCourse: {
-            title: 'AutoCAD course',
-            description: 'AutoCAD 2018 2D course as part of additional classes at school',
+            title: 'Developing start-up',
+            description: 'Development of my own start-up in the SEED project. Cracow',
         },
         thirdCourse: {
             title: `Erasmus+ Youth Exchange "Can I join you?"`,
