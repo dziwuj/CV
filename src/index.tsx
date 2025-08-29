@@ -1,21 +1,18 @@
-import React, { useState, useEffect, createContext, useRef } from "react";
-import { createRoot } from "react-dom/client";
-import { Photo } from "./components/Photo";
-import { About } from "./components/About";
-import { Skills } from "./components/Skills";
-import { Contact } from "./components/Contact";
-import { Languages } from "./components/Languages";
-import { Experience } from "./components/Experience";
-import { Education } from "./components/Education";
-import { Courses } from "./components/Courses";
-import { Name } from "./components/Name";
-import { Overlay } from "./components/Overlay";
-import { rootStore } from "./stores/Root.store";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
-
-import "./styles/main.scss";
-import { Burger } from "./components/Burger";
+import React, { useState, createContext, useRef } from 'react';
+import { createRoot } from 'react-dom/client';
+import { Photo } from './components/Photo';
+import { About } from './components/About';
+import { Skills } from './components/Skills';
+import { Contact } from './components/Contact';
+import { Languages } from './components/Languages';
+import { Experience } from './components/Experience';
+import { Education } from './components/Education';
+import { Courses } from './components/Courses';
+import { Name } from './components/Name';
+import { Overlay } from './components/Overlay';
+import { rootStore } from './stores/Root.store';
+import './styles/main.scss';
+import { Burger } from './components/Burger';
 
 export const StoreContext = createContext(rootStore);
 
@@ -55,11 +52,16 @@ function App() {
                 </div>
             </div>
             <Burger setIsShown={setIsShown} isShown={isShown} />
-            <Overlay resumeRef={resumeRef} setIsShown={setIsShown} isShown={isShown} />
+            <Overlay
+                resumeRef={resumeRef}
+                setIsShown={setIsShown}
+                isShown={isShown}
+            />
         </StoreContext.Provider>
     );
 }
 
-const container = document.getElementById("root");
+const container = document.getElementById('root');
+
 const root = createRoot(container!);
 root.render(<App />);

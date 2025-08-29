@@ -1,4 +1,4 @@
-import { ITranslations } from '../../interfaces/languages'
+import { ITranslations } from '../../interfaces/languages';
 export const translations: ITranslations = {
     overlay: {
         download: 'Pobierz CV',
@@ -7,7 +7,7 @@ export const translations: ITranslations = {
     about: {
         title: 'Kim jestem?',
         description:
-            'Jestem ambitnym studentem szukającym nowych wyzwań. Interesuję się elektroniką, psychologią, projektowaniem gier oraz montażem wideo. Dodatkowo jestem osobą bardzo komunikatywną i otwartą, dlatego lubię podróżować, poznawać nowych ludzi i poszerzać swoje horyzonty. Uwielbiam analizować problemy i rozwiązywać je w najlepszy, optymalny sposób.',
+            'Jestem ambitnym studentem informatyki, zafascynowanym tworzeniem aplikacji webowych i mobilnych. Interesuję się elektroniką, projektowaniem gier oraz szeroko pojętym światem IT, lubię zgłębiać różne ciekawostki i eksperymentować z nowymi narzędziami. Cechuje mnie duża energia i otwartość – chętnie rozmawiam o pomysłach, wymieniam się doświadczeniami i angażuję w projekty zespołowe. Uwielbiam analizować problemy i znajdować optymalne rozwiązania, a ciekawość i entuzjazm sprawiają, że ciągle poszerzam swoje horyzonty i uczę się nowych rzeczy.',
     },
     contact: {
         title: 'Kontakt',
@@ -17,14 +17,15 @@ export const translations: ITranslations = {
     },
     skills: {
         title: 'Umiejętności',
-        list: `<li>HTML5/CSS3 (Sass, Less, Bootstrap)</li>
-          <li>JavaScript/TypeScript (React, React Native, Vue, Socket.io, Node, jQuery, Leaflet, Mobx, Next, Astro)</li>
-          <li>Module bundlers (Webpack, Parcel, Rollup)</li>
-          <li>Systemy kontroli wersji (Github, SVN)</li>
-          <li>Bazy danych (MySQL, PostgreSQL, MongoDB)</li>
-          <li>Obsługa systemów operacyjnych (Windows, Linux, Windows Server 2008/2012) - Intermediate</li>
-          <li>Obsługa aplikacji pakietu Microsoft Office (Excel, Word, Access, Powerpoint) - Intermediate</li>
-          <li>Podstawy języków Python, PHP, Batch, Shell</li>`,
+        list: `<li><strong>Frontend:</strong> HTML5, CSS3 (Sass, Less, Bootstrap), JavaScript/TypeScript</li>
+            <li><strong>Frameworki i biblioteki:</strong> React, Next.js, Astro, Vue, React Native, Redux, MobX, Zustand, jQuery, Leaflet, GSAP</li>
+            <li><strong>Backend:</strong> Node.js, Express, Socket.io, REST API</li>
+            <li><strong>Progresywne Aplikacje Internetowe (PWA):</strong> Service Workery, IndexedDB, Web Push</li>
+            <li><strong>Bazy danych:</strong> PostgreSQL, MySQL, MongoDB, IndexedDB</li>
+            <li><strong>Narzędzia:</strong> Webpack, Parcel, Rollup, GitHub, SVN</li>
+            <li><strong>Systemy operacyjne:</strong> Windows, Linux, Windows Server (2008/2012) – średniozaawansowany</li>
+            <li><strong>Pakiet biurowy:</strong> Microsoft Office (Excel, Word, Access, PowerPoint) – średniozaawansowany</li>
+            <li><strong>Podstawy języków:</strong> Python, C++, PHP, Batch, Shell</li>`,
     },
     languages: {
         title: 'Języki',
@@ -32,6 +33,13 @@ export const translations: ITranslations = {
     },
     experience: {
         firstJob: {
+            company: 'Futurum Technology Ltd.',
+            position: 'Fullstack Developer',
+            dates: 'od kwietnia 2025 do teraz',
+            description:
+                "Tworzenie Progresywanych Aplikacji Internetowych (PWA) przy użyciu Typescript React 19 z Redux'em, service worker'ów i IndexedDB w celu maksymalizacji funkcjonalności offline. Po stronie serwera używałem Express'a z PostgreSQL oraz wdrożyłem system powiadomień push.",
+        },
+        secondJob: {
             company: 'Pluscode',
             position: 'Frontend Developer',
             dates: 'od lipca 2023 do listopada 2023',
@@ -39,19 +47,12 @@ export const translations: ITranslations = {
                 "Tworzenie stron internetowych przy użyciu React'a i Astro. Podczas pracy w tej firmie miałem też styczność z tworzeniem wtyczki przeglądarki zajmującej się scrapingiem. Miałem również okazję popracować nad zaawansowanymi animacjami z użyciem GSAP.",
         },
         title: 'Doświadczenie',
-        secondJob: {
+        thirdJob: {
             company: 'Endurance Systems LLC',
             position: 'Frontend Developer',
             dates: 'od lipca 2022 do października 2022',
             description:
                 'Praca z dużymi plikami JSON/GeoJSON. Podczas mojego pobytu w tej firmie korzystałem z takich technologii jak React 18, Rollup, różnych bibliotek do obsługi map i SVN jako systemu kontroli wersji. Napisałem wtedy również slider, który jest udostępniony do pobrania na npm.',
-        },
-        thirdJob: {
-            company: 'Krakweb',
-            position: 'Praktyki',
-            dates: 'Listopad/Grudzień 2020',
-            description:
-                'Stworzenie własnej strony internetowej jako szablonu dla klientów. Do tego celu wykorzystałem HTML, SCSS, JavaScript oraz firmowy CMS. Praktyka zawodowa została zakończona z oceną celującą.',
         },
     },
     education: {
@@ -65,18 +66,21 @@ export const translations: ITranslations = {
         universityDescription: `Studia na kierunku Informatyka Stosowana`,
     },
     courses: {
-        title: 'Kursy i szkolenia',
+        title: 'Projekty i szkolenia',
         firstCourse: {
-            title: 'Rozwój start-upu',
-            description: 'Rozwój własnego start-upu w ramach projektu fundacji SEED Kraków',
+            title: `Zajęcie 2. miejsca w hackathon'ie "Kościuszkon"`,
+            description:
+                'Podczas hackathonu stworzyliśmy w 24 godziny aplikację GreenJob – narzędzie wspierające ekologiczne podejście do zarządzania energią poprzez inteligentne planowanie zadań',
         },
         secondCourse: {
-            title: 'Kurs AutoCAD',
-            description: 'Kurs AutoCAD 2018 2D w ramach dodatkowych zajęć w szkole',
+            title: 'Rozwój start-upu',
+            description:
+                'Rozwój własnego start-upu w ramach projektu fundacji SEED Kraków',
         },
         thirdCourse: {
-            title: `Wymiana młodzieży w ramach programu Erasmus+ "Can I join you?"`,
-            description: 'Udział w projekcie Erasmus+ w Store Klaus, Dania <br /> (31 maja - 08 czerwca, 2022)',
+            title: 'Kurs AutoCAD',
+            description:
+                'Kurs AutoCAD 2018 2D w ramach dodatkowych zajęć w szkole',
         },
     },
-}
+};
